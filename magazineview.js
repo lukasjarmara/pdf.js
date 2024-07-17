@@ -1,7 +1,7 @@
 <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
 
 <script type="module">
-    var url = 'https://lukasjarmara.github.io/hosting/What%20Next%20Catalog.pdf';
+    var url = 'YOUR_URL';
     var { pdfjsLib } = globalThis;
     pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
 
@@ -57,7 +57,7 @@
                 link.href = annotation.url;
                 link.style.position = 'absolute';
                 link.style.textDecoration = 'underline';
-                //link.style.border = "1px red solid";
+                //link.style.border = "1px red solid"; //if you wish to test if links are in the correct space
 
                 const rect = viewport.convertToViewportRectangle(annotation.rect);
                 const left = Math.min(rect[0], rect[2]) * scaleX;
